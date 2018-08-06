@@ -8,14 +8,14 @@ function getAndPrintHTML () {
     path: '/http-examples/step2.html'
   };
 
-  https.get(requestOptions, response => {
+  https.get(requestOptions, function (response) {
     response.setEncoding('utf8');
 
-    response.on('data', data => {
+    response.on('data', function(data){
       output += data;
     });
 
-    response.on('end', () => {
+    response.on('end', function() {
       console.log(output);
     });
   });
