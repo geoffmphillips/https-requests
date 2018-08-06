@@ -1,7 +1,9 @@
 var getHTML = require("./http-functions.js");
 
 function printReverse(html) {
-  console.log(html);
+  output = html.split('').reverse().join('');
+
+  console.log(output);
 }
 
 var requestOptions = {
